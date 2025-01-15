@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <Description>Logos.HfTokenizers class library.</Description>
-    <PackageTags></PackageTags>
+    <TargetFramework>net8.0</TargetFramework>
+    <Description>C# wrapper for https://github.com/huggingface/tokenizers/tree/main/tokenizers</Description>
+    <PackageTags>huggingface tokenizers</PackageTags>
     <IsPackable>true</IsPackable>
     <EnablePackageValidation>true</EnablePackageValidation>
     <PackageReadmeFile>README.md</PackageReadmeFile>
