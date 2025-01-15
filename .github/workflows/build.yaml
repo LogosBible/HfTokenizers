@@ -31,6 +31,12 @@ jobs:
       uses: dtolnay/rust-toolchain@stable
     - name: Build Rust
       run: .\build.ps1 build-rust
+    - name: Upload native artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: native-${{ runner.os }}
+        path: rust/logoshft/target/*/release/logoshft.*
+        if-no-files-found: error
     - name: Test Rust
       run: .\build.ps1 test-rust
     - name: Restore
@@ -49,6 +55,16 @@ jobs:
       uses: actions/checkout@v3
     - name: Install .NET
       uses: actions/setup-dotnet@v3
+    - name: Download Windows native artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: native-Windows
+        path: rust/logoshft/target/win-x64/release
+    - name: Download Linux native artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: native-Linux
+        path: rust/logoshft/target/linux-x64/release
     - name: Build and Publish
       env:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
