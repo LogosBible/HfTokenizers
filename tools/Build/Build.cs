@@ -1,8 +1,14 @@
+var platform = BuildEnvironment.IsWindows() ? "win-x64" :
+	BuildEnvironment.IsLinux() ? "linux-x64" :
+	BuildEnvironment.IsMacOS() ? "osx-x64" :
+	throw new InvalidOperationException("Could not determine platform.");
+
 return BuildRunner.Execute(args, build =>
 {
 	build.AddDotNetTargets(
 		new DotNetBuildSettings
 		{
+			SolutionPlatform = platform,
 			NuGetApiKey = Environment.GetEnvironmentVariable("NUGET_API_KEY"),
 		});
 
@@ -13,11 +19,6 @@ return BuildRunner.Execute(args, build =>
 
 void RunCargo(string command)
 {
-	var platform = BuildEnvironment.IsWindows() ? "win-x64" :
-		BuildEnvironment.IsLinux() ? "linux-x64" :
-		BuildEnvironment.IsMacOS() ? "osx-x64" :
-		throw new InvalidOperationException("Could not determine platform.");
-
 	RunApp("cargo",
 		new AppRunnerSettings
 		{
