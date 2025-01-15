@@ -11,13 +11,13 @@
     <NoWarn>$(NoWarn);1591;1998;NU1507;NU5105</NoWarn>
     <NeutralLanguage>en-US</NeutralLanguage>
     <DebugType>embedded</DebugType>
-    <GitHubOrganization>Faithlife</GitHubOrganization>
+    <GitHubOrganization>LogosBible</GitHubOrganization>
     <RepositoryName>HfTokenizers</RepositoryName>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/$(GitHubOrganization)/$(RepositoryName)</PackageProjectUrl>
     <PackageReleaseNotes>https://github.com/$(GitHubOrganization)/$(RepositoryName)/blob/master/ReleaseNotes.md</PackageReleaseNotes>
     <RepositoryUrl>https://github.com/$(GitHubOrganization)/$(RepositoryName).git</RepositoryUrl>
-    <Authors>Faithlife</Authors>
+    <Authors>Logos</Authors>
     <Copyright>Copyright $(Authors)</Copyright>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
