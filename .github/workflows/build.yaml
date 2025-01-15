@@ -35,7 +35,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: native-${{ runner.os }}
-        path: rust/logoshft/target/*/release/logoshft.*
+        path: rust/logoshft/target/*/release/*
         if-no-files-found: error
     - name: Test Rust
       run: .\build.ps1 test-rust
