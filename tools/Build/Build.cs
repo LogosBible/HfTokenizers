@@ -1,7 +1,6 @@
 var platform = BuildEnvironment.IsWindows() ? "win-x64" :
 	BuildEnvironment.IsLinux() ? "linux-x64" :
-	BuildEnvironment.IsMacOS() ? "osx-x64" :
-	throw new InvalidOperationException("Could not determine platform.");
+	throw new InvalidOperationException("Platform not supported.");
 
 return BuildRunner.Execute(args, build =>
 {
