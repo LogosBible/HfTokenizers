@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName", "src\ProjectName\ProjectName.csproj", "{1F75E8CE-F59A-4738-81EC-17B71C125A06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logos.HfTokenizers", "src\Logos.HfTokenizers\Logos.HfTokenizers.csproj", "{1F75E8CE-F59A-4738-81EC-17B71C125A06}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.Tests", "tests\ProjectName.Tests\ProjectName.Tests.csproj", "{3506DA15-B470-42E7-B897-D436451CBC32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logos.HfTokenizers.Tests", "tests\Logos.HfTokenizers.Tests\Logos.HfTokenizers.Tests.csproj", "{3506DA15-B470-42E7-B897-D436451CBC32}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Build", "tools\Build\Build.csproj", "{9BB3C85C-100E-4128-A9AF-8F697D753538}"
 EndProject

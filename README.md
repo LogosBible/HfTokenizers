@@ -1,7 +1,7 @@
-# ProjectName
+# Logos.HfTokenizers
 
-ProjectName class library.
+Logos.HfTokenizers class library.
 
-[![Build](https://github.com/Faithlife/RepoName/workflows/Build/badge.svg)](https://github.com/Faithlife/RepoName/actions?query=workflow%3ABuild) [![NuGet](https://img.shields.io/nuget/v/ProjectName.svg)](https://www.nuget.org/packages/ProjectName)
+[![Build](https://github.com/Faithlife/HfTokenizers/workflows/Build/badge.svg)](https://github.com/Faithlife/HfTokenizers/actions?query=workflow%3ABuild) [![NuGet](https://img.shields.io/nuget/v/Logos.HfTokenizers.svg)](https://www.nuget.org/packages/Logos.HfTokenizers)
 
-[Documentation](https://faithlife.github.io/RepoName/) | [Release Notes](https://github.com/Faithlife/RepoName/blob/master/ReleaseNotes.md) | [Contributing](https://github.com/Faithlife/RepoName/blob/master/CONTRIBUTING.md)
+[Documentation](https://faithlife.github.io/HfTokenizers/) | [Release Notes](https://github.com/Faithlife/HfTokenizers/blob/master/ReleaseNotes.md) | [Contributing](https://github.com/Faithlife/HfTokenizers/blob/master/CONTRIBUTING.md)

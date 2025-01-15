@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace ProjectName.Tests;
+namespace Logos.HfTokenizers.Tests;
 
 internal sealed class PlaceholderTests
 {
