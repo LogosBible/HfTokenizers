@@ -39,9 +39,17 @@ jobs:
       run: .\build.ps1 build --skip restore
     - name: Test C#
       run: .\build.ps1 test --skip build
-    - name: Publish
-      if: runner.os == 'Windows' && github.repository_owner == 'LogosBible' && github.ref == 'refs/heads/master'
+
+  publish:
+    needs: build
+    if: github.repository_owner == 'LogosBible' && github.ref == 'refs/heads/master'
+    runs-on: windows-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+    - name: Install .NET
+      uses: actions/setup-dotnet@v3
+    - name: Build and Publish
       env:
-        BUILD_BOT_PASSWORD: ${{ secrets.BUILD_BOT_PASSWORD }}
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-      run: .\build.ps1 publish --skip test
+      run: .\build.ps1 publish --platform "Any CPU"
