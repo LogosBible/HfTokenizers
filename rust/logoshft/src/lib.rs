@@ -55,7 +55,7 @@ mod tests {
 
     #[test]
     fn test_count_tokens() {
-        let tokenizer_json = fs::read("..\\..\\tests\\tokenizer.json").unwrap();
+        let tokenizer_json = fs::read("../../tests/tokenizer.json").unwrap();
         let tokenizer_cstr = CString::new(tokenizer_json).unwrap();
         let handle = create_tokenizer(tokenizer_cstr.as_ptr());
         assert!(!handle.is_null());
