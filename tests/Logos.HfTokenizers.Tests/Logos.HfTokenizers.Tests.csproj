@@ -4,6 +4,8 @@
     <Platforms>win-x64;linux-x64;osx-x64</Platforms>
     <TargetFramework>net9.0</TargetFramework>
     <RuntimeIdentifier Condition=" '$(Platform)' == 'win-x64' ">win-x64</RuntimeIdentifier>
+    <RuntimeIdentifier Condition=" '$(Platform)' == 'linux-x64' ">linux-x64</RuntimeIdentifier>
+    <RuntimeIdentifier Condition=" '$(Platform)' == 'osx-x64' ">osx-x64</RuntimeIdentifier>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
   </PropertyGroup>

@@ -21,19 +21,20 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
+      fail-fast: false
     steps:
     - name: Check out code
       uses: actions/checkout@v3
-    - name: Install Rust toolchain
+    - name: Install Rust
       uses: dtolnay/rust-toolchain@stable
-    - name: Install .NET
-      uses: actions/setup-dotnet@v3
-    - name: Restore
-      run: .\build.ps1 restore
     - name: Build Rust
       run: .\build.ps1 build-rust
     - name: Test Rust
       run: .\build.ps1 test-rust
+    - name: Install .NET
+      uses: actions/setup-dotnet@v3
+    - name: Restore
+      run: .\build.ps1 restore
     - name: Build C#
       run: .\build.ps1 build --skip restore
     - name: Test C#

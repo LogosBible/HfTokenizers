@@ -17,6 +17,8 @@
 
   <ItemGroup>
     <None Include="..\..\rust\logoshft\target\win-x64\release\logoshft.dll" PackagePath="runtimes/win-x64/native" Pack="true" CopyToOutputDirectory="PreserveNewest" Condition=" '$(Platform)' == 'package' or '$(Platform)' == 'win-x64' " />
+    <None Include="..\..\rust\logoshft\target\linux-x64\release\liblogoshft.so" PackagePath="runtimes/linux-x64/native" Pack="true" CopyToOutputDirectory="PreserveNewest" Condition=" '$(Platform)' == 'package' or '$(Platform)' == 'linux-x64' " />
+    <None Include="..\..\rust\logoshft\target\osx-x64\release\liblogoshft.dylib" PackagePath="runtimes/osx-x64/native" Pack="true" CopyToOutputDirectory="PreserveNewest" Condition=" '$(Platform)' == 'package' or '$(Platform)' == 'osx-x64' " />
   </ItemGroup>
 
 </Project>
