@@ -1,8 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Platforms>win-x64;linux-x64;osx-x64</Platforms>
     <TargetFramework>net9.0</TargetFramework>
+    <RuntimeIdentifier Condition=" '$(Platform)' == 'win-x64' ">win-x64</RuntimeIdentifier>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
   </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\tokenizer.json" Link="tokenizer.json" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" />

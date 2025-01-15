@@ -1,16 +1,22 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Platforms>package;win-x64;linux-x64;osx-x64</Platforms>
     <TargetFramework>net8.0</TargetFramework>
     <Description>C# wrapper for https://github.com/huggingface/tokenizers/tree/main/tokenizers</Description>
     <PackageTags>huggingface tokenizers</PackageTags>
     <IsPackable>true</IsPackable>
     <EnablePackageValidation>true</EnablePackageValidation>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\rust\logoshft\target\win-x64\release\logoshft.dll" PackagePath="runtimes/win-x64/native" Pack="true" CopyToOutputDirectory="PreserveNewest" Condition=" '$(Platform)' == 'package' or '$(Platform)' == 'win-x64' " />
   </ItemGroup>
 
 </Project>

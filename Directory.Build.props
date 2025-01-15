@@ -28,7 +28,7 @@
     <IsPackable>false</IsPackable>
     <IsTestProject>false</IsTestProject>
     <SelfContained>false</SelfContained>
-    <UseArtifactsOutput>true</UseArtifactsOutput>
+    <UseArtifactsOutput>false</UseArtifactsOutput>
     <EnableStrictModeForCompatibleFrameworksInPackageValidation>true</EnableStrictModeForCompatibleFrameworksInPackageValidation>
     <EnableStrictModeForCompatibleTfms>true</EnableStrictModeForCompatibleTfms>
     <DisablePackageBaselineValidation Condition=" $(PackageValidationBaselineVersion) == $(VersionPrefix) or $(PackageValidationBaselineVersion) == '0.0.0' ">true</DisablePackageBaselineValidation>

@@ -8,7 +8,9 @@ internal sealed class TokenizerTests
 	[Test]
 	public void CountTokens()
 	{
-		using var tokenizer = Tokenizer.FromJson("{}");
+		using var stream = typeof(TokenizerTests).Assembly.GetManifestResourceStream("Logos.HfTokenizers.Tests.tokenizer.json")!;
+		using var reader = new StreamReader(stream);
+		using var tokenizer = Tokenizer.FromJson(reader.ReadToEnd());
 		tokenizer.CountTokens("Hello, world!").ShouldBe(4);
 	}
 }

@@ -24,13 +24,19 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v3
+    - name: Install Rust toolchain
+      uses: dtolnay/rust-toolchain@stable
     - name: Install .NET
       uses: actions/setup-dotnet@v3
     - name: Restore
       run: .\build.ps1 restore
-    - name: Build
+    - name: Build Rust
+      run: .\build.ps1 build-rust
+    - name: Test Rust
+      run: .\build.ps1 test-rust
+    - name: Build C#
       run: .\build.ps1 build --skip restore
-    - name: Test
+    - name: Test C#
       run: .\build.ps1 test --skip build
     - name: Publish
       if: runner.os == 'Windows' && github.repository_owner == 'LogosBible' && github.ref == 'refs/heads/master'

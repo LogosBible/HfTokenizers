@@ -1,0 +1,11 @@
+[package]
+name = "logoshft"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "logoshft"
+crate-type = ["cdylib"]
+
+[dependencies]
+tokenizers = "0.21.0"
