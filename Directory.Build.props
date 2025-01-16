@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <VersionPrefix>0.0.1</VersionPrefix>
-    <VersionSuffix>alpha.1</VersionSuffix>
     <PackageValidationBaselineVersion>0.0.0</PackageValidationBaselineVersion>
     <LangVersion>13.0</LangVersion>
     <Nullable>enable</Nullable>
