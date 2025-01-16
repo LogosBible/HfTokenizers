@@ -66,3 +66,9 @@ jobs:
       env:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
       run: .\build.ps1 publish --platform "Any CPU"
+    - name: Upload package artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: package
+        path: release/*.nupkg
+        if-no-files-found: error
